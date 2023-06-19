@@ -1,0 +1,15 @@
+{% extends "clickbait_generator/base.html" %}
+{% load crispy_forms_tags %}
+{% block content%}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            {% if clickbait_message %}
+                <p class="article-content">{{ clickbait_message }}</p>
+            {% endif %}
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Generate Click Bait</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
