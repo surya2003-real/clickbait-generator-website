@@ -11,7 +11,7 @@ def clickbait_generator(length=5, i=1):
     for s in dt:
         for w in s.split():
             s1.add(w)
-
+    s1=sorted(s1)
     stoi={}
     cnt=1
     for w in s1:
@@ -19,7 +19,7 @@ def clickbait_generator(length=5, i=1):
         cnt+=1
         stoi.update({'.':0})
 
-    W = torch.load('py_model/tensor_params.pth')
+    W = torch.load('py_model/tensor_params2.pth')
     g = torch.Generator().manual_seed(i)
     itos = {value: key for key, value in stoi.items()}
     for i in range(1):

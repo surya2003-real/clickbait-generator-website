@@ -9,7 +9,7 @@ from random import randint
 def home(request):
 
     if request.method == 'POST':
-        clickbait_message = clickbait_generator(5, randint(1, 10000000))
+        clickbait_message = clickbait_generator(10, randint(1, 10000000))
         return render(request, 'clickbait_generator/home.html', {'clickbait_message': clickbait_message})
     else:
         return render(request, 'clickbait_generator/home.html')
