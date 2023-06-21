@@ -38,8 +38,8 @@ Then open the link that appears in the terminal.
 ## Explanation of the code:
 For understanding we can split the code into 2 parts:
 
-1. The model
+1. The model:  
 It is a simple model which generates a click bait based on the probability of the next word if we know the previous word. It involves hot encoding the words and then using a simple neural network to predict the next word. It uses negative log likelihood loss function and batch gradient descent.
 
-2. The website and the server
+2. The website and the server:  
 It is a simple website which takes the input from the user and then sends it to the server. The server then generates the clickbait and sends it back to the website. The website then displays the clickbait to the user.
